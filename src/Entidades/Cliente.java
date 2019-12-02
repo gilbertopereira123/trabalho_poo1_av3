@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class Cliente {
 	
-	private Random id;
+	private int id;
 	private String nome;
 	private String email;
 	private String cpfOUCnpj;
@@ -14,16 +14,14 @@ public class Cliente {
 	private List<Endereco> endereco;
 	
 	
-	public Cliente(Random id, String nome, String email, String cpfOUCnpj, TipoCliente tipo, List<String> telefones,
-			List<Endereco> endereco) {
+	public Cliente(int id, String nome, String email, String cpfOUCnpj, TipoCliente tipo) {
 		super();
 		this.id = id;
 		this.nome = nome;
 		this.email = email;
 		this.cpfOUCnpj = cpfOUCnpj;
 		this.tipo = tipo;
-		this.telefones = telefones;
-		this.endereco = endereco;
+
 	}
 	
 	public Cliente() {
@@ -31,12 +29,12 @@ public class Cliente {
 	}
 
 
-	public Random getId() {
+	public int getId() {
 		return id;
 	}
 
 
-	public void setId(Random id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -98,6 +96,13 @@ public class Cliente {
 
 	public void setEndereco(List<Endereco> endereco) {
 		this.endereco = endereco;
+	}
+
+	@Override
+	public String toString() {
+		return "Cliente \n"
+				+ "id = " + id + "\n nome=" + nome + "\n email=" + email + "\n cpfOUCnpj=" + cpfOUCnpj + "\n tipo="
+				+ tipo;
 	}
 
 	

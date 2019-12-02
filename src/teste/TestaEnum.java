@@ -1,11 +1,12 @@
 package teste;
 
+
 public class TestaEnum {
 	
 	public static void main(String[] args) {
 		
 		
-	 System.out.println(DiasdaSemana(2));
+	System.out.println(DiasdaSemana.SEGUNDA);
 		
 		
 	}

@@ -5,11 +5,11 @@ import java.util.Random;
 public class ItemPedido {
 	
 	private double desconto;
-	private Random quantidade;
+	private int quantidade;
 	private double preco;
 	
 	
-	public ItemPedido(double desconto, Random quantidade, double preco) {
+	public ItemPedido(double desconto, int quantidade, double preco) {
 		super();
 		this.desconto = desconto;
 		this.quantidade = quantidade;
@@ -30,12 +30,12 @@ public class ItemPedido {
 	}
 
 
-	public Random getQuantidade() {
+	public int getQuantidade() {
 		return quantidade;
 	}
 
 
-	public void setQuantidade(Random quantidade) {
+	public void setQuantidade(int quantidade) {
 		this.quantidade = quantidade;
 	}
 
@@ -47,6 +47,12 @@ public class ItemPedido {
 
 	public void setPreco(double preco) {
 		this.preco = preco;
+	}
+
+	@Override
+	public String toString() {
+		return "ItemPedido \ndesconto=" + desconto + ","
+				+ "\n quantidade=" + quantidade + "\n preco=" + preco;
 	}
 	
 	

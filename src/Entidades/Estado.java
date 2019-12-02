@@ -44,6 +44,11 @@ public class Estado {
 		this.cidades = cidades;
 	}
 
+	@Override
+	public String toString() {
+		return "Estado \n id=" + id + "\n nome=" + nome;
+	}
+
 	
 	
 	

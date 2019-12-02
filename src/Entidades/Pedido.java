@@ -7,29 +7,30 @@ import java.util.Random;
 
 public class Pedido {
 	
-	private Random id;
+	private int id;
 	private Date instante;
+	private Cliente cliente;
 	private Endereco enderecoEntrega;
 	private Pagamento pagamento;
 	private List<Produto>produto;
 	
-	public Pedido(Random id, Date instante, Endereco enderecoEntrega, Pagamento pagamento, List<Produto> produto) {
+	public Pedido(int id, Date instante,Cliente cliente, Endereco enderecoEntrega, Pagamento pagamento) {
 		super();
 		this.id = id;
 		this.instante = instante;
+		this.cliente = cliente;
 		this.enderecoEntrega = enderecoEntrega;
 		this.pagamento = pagamento;
-		this.produto = produto;
 	}
 	
 	public Pedido() {
 		
 	}
 	
-	public Random getId() {
+	public int getId() {
 		return id;
 	}
-	public void setId(Random id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public Date getInstante() {
@@ -55,6 +56,20 @@ public class Pedido {
 	}
 	public void setProduto(List<Produto> produto) {
 		this.produto = produto;
+	}
+
+	public Cliente getCliente() {
+		return cliente;
+	}
+
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
+
+	@Override
+	public String toString() {
+		return "Pedido\n id= " + id + "\n instante=" + instante + "\n cliente=" + cliente + "\n enderecoEntrega="
+				+ enderecoEntrega + "\n pagamento=" + pagamento.getEstado() + "\n produto=" + produto;
 	}
 	
 	

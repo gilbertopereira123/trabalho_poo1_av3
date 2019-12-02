@@ -4,10 +4,10 @@ import java.util.Random;
 
 public class Pagamento {
 	
-	private Random id;
+	private int id;
 	private StatusPagamento estado;
 	
-	public Pagamento(Random id, StatusPagamento estado) {
+	public Pagamento(int id, StatusPagamento estado) {
 		super();
 		this.id = id;
 		this.estado = estado;
@@ -17,11 +17,11 @@ public class Pagamento {
 		
 	}
 
-	public Random getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(Random id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -31,6 +31,11 @@ public class Pagamento {
 
 	public void setEstado(StatusPagamento estado) {
 		this.estado = estado;
+	}
+
+	@Override
+	public String toString() {
+		return "Pagamento \nid=" + id + "\n estado=" + estado;
 	}
 	
 	

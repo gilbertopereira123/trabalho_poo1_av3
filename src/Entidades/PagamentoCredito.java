@@ -4,9 +4,9 @@ import java.util.Random;
 
 public class PagamentoCredito extends Pagamento{
 	
-	private Random parcelas;
+	private int parcelas;
 
-	public PagamentoCredito(Random id, StatusPagamento estado, Random parcelas) {
+	public PagamentoCredito(int id, StatusPagamento estado, int parcelas) {
 		super(id, estado);
 		this.parcelas = parcelas;
 	}
@@ -15,12 +15,17 @@ public class PagamentoCredito extends Pagamento{
 		
 	}
 
-	public Random getParcelas() {
+	public int getParcelas() {
 		return parcelas;
 	}
 
-	public void setParcelas(Random parcelas) {
+	public void setParcelas(int parcelas) {
 		this.parcelas = parcelas;
+	}
+
+	@Override
+	public String toString() {
+		return "PagamentoCredito [parcelas=" + parcelas + "]";
 	}
 	
 	

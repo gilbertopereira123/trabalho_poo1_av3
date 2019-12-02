@@ -13,9 +13,6 @@ public class Cidade {
     public Cidade() {
 	
 	}
-    
-    
-	
 	
 	public Cidade(int id, String nome, Estado estado) {
 		super();
@@ -48,7 +45,7 @@ public class Cidade {
 	
 	@Override
 	public String toString() {
-		return "Cidade \n id=" + id + "\n nome=" + nome;
+		return "Cidade \n id=" + id + "\n nome=" + nome +"\n estado="+ estado.getNome();
 	}
     
     

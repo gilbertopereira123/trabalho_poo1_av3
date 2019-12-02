@@ -12,9 +12,6 @@ private String bairro;
 private String cep;
 private Cidade cidade;
 
-
-
-
 public Endereco(int id, String logradouro, String numero, String complemento, String bairro, String cep,
 		Cidade cidade) {
 	super();
@@ -72,6 +69,12 @@ public Cidade getCidade() {
 }
 public void setCidade(Cidade cidade) {
 	this.cidade = cidade;
+}
+
+@Override
+public String toString() {
+	return "Endereco\n id=" + id + "\n logradouro=" + logradouro + "\n numero=" + numero + "\n complemento=" + complemento
+			+ "\n bairro=" + bairro + "\n cep=" + cep + "\n cidade=" + cidade.getNome();
 }
 
 

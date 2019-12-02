@@ -8,7 +8,7 @@ public class PagamentoBoleto extends Pagamento{
 	private Date dataVencimento;
 	private Date dataPagamento;
 	
-	public PagamentoBoleto(Random id, StatusPagamento estado, Date dataVencimento, Date dataPagamento) {
+	public PagamentoBoleto(int id, StatusPagamento estado, Date dataVencimento, Date dataPagamento) {
 		super(id, estado);
 		this.dataVencimento = dataVencimento;
 		this.dataPagamento = dataPagamento;
@@ -32,6 +32,11 @@ public class PagamentoBoleto extends Pagamento{
 
 	public void setDataPagamento(Date dataPagamento) {
 		this.dataPagamento = dataPagamento;
+	}
+
+	@Override
+	public String toString() {
+		return "PagamentoBoleto \n dataVencimento=" + dataVencimento + "\n dataPagamento=" + dataPagamento;
 	}
 	
 	

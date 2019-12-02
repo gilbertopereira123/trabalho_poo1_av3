@@ -4,22 +4,22 @@ import java.util.Random;
 
 public class Categoria {
 	
-	private Random id;
+	private int id;
 	private String nome;
 	
 	public Categoria() {
 		
 	}
 	
-	public Categoria(Random id, String nome) {
+	public Categoria(int id, String nome) {
 		super();
 		this.id = id;
 		this.nome = nome;
 	}
-	public Random getId() {
+	public int getId() {
 		return id;
 	}
-	public void setId(Random id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public String getNome() {

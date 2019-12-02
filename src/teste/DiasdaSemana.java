@@ -9,8 +9,7 @@ public enum DiasdaSemana {
 	
         DiasdaSemana(int cod){
 		
-		this.codigo = cod;
-	}
-	
+		codigo = cod;
+	}    
 	
 }
