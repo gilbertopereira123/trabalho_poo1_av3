@@ -1,7 +1,5 @@
 package Entidades;
 
-import java.util.Random;
-
 public class Pagamento {
 	
 	private int id;
@@ -31,6 +29,34 @@ public class Pagamento {
 
 	public void setEstado(StatusPagamento estado) {
 		this.estado = estado;
+	}
+
+	
+	
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((estado == null) ? 0 : estado.hashCode());
+		result = prime * result + id;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Pagamento other = (Pagamento) obj;
+		if (estado != other.estado)
+			return false;
+		if (id != other.id)
+			return false;
+		return true;
 	}
 
 	@Override
